@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/index.css" />
+	<title>Day 2</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href ="about.html"> About</a></li>
+                <li><a href="contact.html">Contact</a> </li>
+                <li><a href="home.html">Home</a> </li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    |<h1>Day 2</h1>
+
+    <div class = "courses nav">
+        <ul>
+            <li><a href="day1.html">Previous</a></li>
+            <li><a href="day3.html">Next</a></li>
+        </ul>
+    </div> 
+    
+    <h1>Agenda</h1>
+
+<ul>
+<li> Charsets</li>
+<li> HTML, XHTML, HTML5</li>
+<li> Semantics </li>
+<li> Forms, SVG, Multimedia </li>
+<li> To Do </li>
+
+
+<h1> Character Sets And Languages </h1>
+The W3C recommends the UTF-8 charset for web development. It includes an impressive array of languages and special characters, and is well supported in common devices.
+
+<h1> Assign Character Set </h1>
+<p> If it is not specified, a web browser will choose the character set it thinks is most appropriate, but it is a better practice for the developer to ensure the correct character set by applying the meta tag to the head section of every HTML page:
+<meta charset="utf-8" />
+</p>
+
+<ul>
+<li> Write all your text-based code (.html, .css, .js, .php, etc) in UTF-8. At development time, ensure your text editor is saving files in this format. This setting is usually found in the application's Preferences menu option.</li>
+<li>Unless your audience includes very old browsers, you can code special characters directly into the HTML (you dont need to use HTML entities for most special characters).</li>
+<li>You cannot copy-paste rich text (such as Microsoft Word, or WordPad) into your HTML. The rich text formatting may result in an unreadable mess.</li>
+<li>An HTTP server can over-ride your charset preferences when it generates the HTTP header. Details on how to control this will be discussed later in this course.</li>
+
+<h1>  HTML lang Attribute</h1>
+<p>Use the lang="" attribute to declare the language in HTML. This is usually applied to the html element. Assigning the appropriate language code will apply to all contained content, unless over-ridden with another lang="". </p>
+<p>Use the language abbreviations from the standard ISO 639-1 code set (don't use ISO 639-2).
+HTML,<p>
+<p>What started as a language defined by SGML (Standard Generalized Markup Language), HTML is used to mark up billions of pages, making up the bulk of the web.</p>
+<ul>
+<li>Late 1991, Tim Berners-Lee releases the first iteration of what would become HTML 2.0 (there was no real 1.0+) </li>
+<li>HTML was a language created at the dawn of the Web, using SGML (Standard Generalized Markup Language) as a template </li>
+<li>Over the next decade, various additions, improvements and changes are introduced</li>
+<li>HTML 4.01 released in December 1999</li>
+<li>Initially used for documents and a place for the technically inclined, the web did not have the international pervasiveness it does today</li>
+<li>Most developers were new to the language and there were no real classes in it</li>
+<li>People had to learn as they went along</li>
+<li>A lot of early sites are poorly designed</li>
+
+<h1>HTML 4.01 template</h1>
+<p>The problem with the state of HTML then was its reputation as a loose language. Poorly structured code would be rendered differently across user agents, leading to forked code and less predictable results.</p>
+
+<h2>XHTML</h2>
+<p>The XHTML specification was the result of rewriting HTML 4.01 using the ruleset derived from XML,/p>
+
+<ul>
+<li> HTML 4.01 + XML = XHTML 1.0</li>
+<li> X = eXtensible</li>
+<li> X = XML related</li>
+<li>Better, more predictable coding patterns. </li>
+<li>Verifiable or "well-formed" code can be produced. </li>
+<li>Forces a higher standard of HTML. </li>
+<li>Predictable behavior across user agents. </li>
+<li>Porting to HTML5 is easy (if you also observe semantic guidelines).</li>
+
+
+<h2>XHTML Rules:</h2>
+All elements must be properly nested
+<ul>
+<li>This is not valid: <p><b>Bolded Text</p></b></li>
+<li>This can be a problem with things like Lists <ol> and <ul>. </li>
+<li>Especially when closing the List Item <li> tag that contains the <ul> or <ol> tag.</li>
+</ul>
+All tags must close
+<ul>
+<li>Example: <p>Some text here</p> </li>
+<li>Empty Elements are closed as well: <br /> or <img src="#" /> </li>
+<li>An extra space is required before the slash to work with all browsers. </li>
+All tag names must be in lower case
+<dl>
+<li><Img Src="some_image.gif"> is not valid </li>
+</ul>
+Attribute names are always in lower case
+<!-- <ul><li><p ALIGN="center"> should be <p align="center"></li><ul>
+<p>All attributes must be quoted</p>
+<ul><li> < body bgcolor=black> will not work, you need: <body bgcolor="black"></li></ul>
+<p>Attributes cannot be minimized</p> -->
+
+<!-- <p>	<input type="checkbox" checked> cannot be used. The valid code is: <input type="checkbox" checked="checked" />
+•	Name Attribute is no longer used (except with forms). Replace "name" with "id". -->
+<!-- o	<img src="picture.gif" name="myimage" /> will not validate. Use id="myimage" instead. -->
+•	Mandatory Elements: Every XHTML document must have these elements:
+<!-- o	<html>
+o	<head>
+o	<title>
+o	<body> -->
+<p>The  !DOCTYPE> declaration must be there, but it is part of the document itself rather than an element of the document. </p>	
+<p>	Documents must be well-formed</p>
+<p>The document must conform to all of the above rules</p>
+    <p>	Optional XML declaration</p>
+        <p>Not required, but good practice:</p>
+            <p><?xml version="1.0" encoding="ISO-8859-1"?></p>
+                <p>Optional Element: An XHTML document should also declare the type and character encoding in the head section to ensure the server sends the correct content-type header: </p>
+                    <p><meta http-equiv="Content-Type" content="text/html" charset="UTF-8"></p>
+                        <p>XHTML 1.0 template</p>
+                            <p>HTML5</p>
+<p>As of October 28, 2014, HTML5 is the official W3C recommendation</p>
+<p>HTML5 is more evolutionary then revolutionary. The bulk of previous HTML elements and attributes are maintained, with a few deprecations, and several additions.</p>
+<p> Significant features include:</p>
+<p>Ultra simple Doctype: <!DOCTYPE html></p>
+    <p>Specifies how browsers should behave with imperfect code </p>
+        <p>Ability to embed XML, MathML or SVG markup.</p>
+            <p>Standardized Javascript API increases client side script compatibility across browsers</p>
+                <p>Backwards compatible - older versions of HTML can effectively be updated by simply changing the doctype to HTML5</p>
+                    <p>Guiding principles: Enhance semantic coding, Support existing content, Pave the cowpaths</p>
+
+
+
+
+<h2>HTML 5 template</h2>
+<p>Paving the Cowpaths
+    <p>Common developer practices have been simplified
+        <p>Finally a DOCTYPE we can all remember:
+            <p><!DOCTYPE html>
+                <p>	Declaring the character encoding is easier:
+                    <p><meta charset="utf-8">
+                        <p>	When linking to external stylesheets the type attribute is not required:
+                            <p><link rel="stylesheet" href="style.css" />
+                                <p>When embedding CSS the type attribute is not required:
+                                    <p><style></style>
+                                        <p>	Including javascripts is simplified as well (type attribute is not required)
+                                            <p><script src="javascripts.js"></script>
+
+
+                                                <p>HTML5: Enhanced Semantic Coding
+                                                    <p>It is crucial for all HTML content to be semantically marked up. This is how browsers, search engines, and screen readers make sense of online content.
+                                                        <p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:
+
+                                                            <ul>
+•	<section> is a tag representing a document or application section. in general, if you are planning to use a heading, start a new section. a section must contain a heading, and may contain article(s), possibly asides or even sub-sections
+•	<article> is an independent piece of content in a document (it could stand alone if removed from the page). an article might be a blog post, forum thread, news story, collection of product information, etc
+•	<aside> is for content "only slightly" related to the main page content. asides fill the role of a sidebar. if the content could be removed without reducing the meaning of the main content of the HTML document, then use an aside
+•	<header> and <footer> are for the header or footer of a page
+•	<nav> represents an area for navigation
+•	<main> used for containing content that is focused on the central topic of the page. this content is usually unique to the page, and not shared by other pages (main will usually NOT contain navigations, footers, sidebars, etc)
+•	<figure> will likely contain an img or graphic. self-contained content (could usually be removed from the page and stand on its own). allows for captioning of embedded content like an image graphic or video. if you want to associate a caption, add a figcaption child
+•	<figcaption> used as first or last child of figure to define the caption or legend for a figure
+These represent some big changes in HTML, allowing for more flexibility in coding and specifying content. Many of these will replace and reduce the need for many div tags. eg: instead of the typical <div id="header">, use <header>.
+Having trouble deciding which tag to use for what content? Try this HTML5 flowchart.
+HTML5 Semantic Alterations
+HTML5 also brings a few notable semantic alterations to older tags:
+•	<a> though still an inline tag, it is now ok to nest multiple block level tags (headings, paragraphs etc) inside an anchor tag
+•	<small> no longer a 'physical' tag for smaller sized print, it now has semantic value: meaning 'small print', i.e. 'legalese'. the big element has been deprecated
+•	<b> no longer means 'render bold'. now it means the text is 'stylisticly offset from the normal text', without conveying any extra importance. to convey extra importance, use <strong>
+•	<i> now means the text is 'in an alternate voice or mood', without conveying any extra emphasis. to convey extra emphasis, use <em>
+•	Deprecated tags: <big>, <font>, <strike>, and a few more. Developers should use CSS instead of these deprecated tags.
+•	Deprecated attributes: align, bgcolor, border, height, size, type, width and more. Developers should use CSS instead of these deprecated attributes.
+HTML5 Content Models
+Pre-HTML5, there were basically two categories of tags: inline and block. HTML5 intoduces a more nuanced set of categories that allow for greater semantic sectioning of content. The content model will help the browser to determine the semantics of your content.
+Content Models
+•	text-level content: most inline tags
+•	grouping content: most block tags
+•	replaced content: all the form widgets and related tags
+•	embedded content: video, audio, canvas
+•	sectioning content: new structural, semantic options
+Sectioning Content
+<p>
+The <section> tag can be used to semantically group content. It can remove ambiguity when a page is being processed by the browser, a screen reader, or search engine.</p>
+<p>For example, imagine you have created the following code:</p>
+<p>Since content that follows a heading is presumed to be associated with that heading, the code above carries plenty of semantic value already. 
+But, if the small tag's content is intended to apply to all cities, a browser has no way of knowing that. It will instead assume the small tag is 
+associated with the preceding heading (<h3>Tokyo</h3>)
+</p>
+<p>
+Use the section tag to explicitly demarcate the start and end of the related content:</p>
+<p>
+This new sectioning will inform the browser that the small is associated with the h1
+</p>
+<p>
+In HTML5, each piece of sectioned content has its own self-contained outline. This means you wont need to worry as much about which level heading tag to use.
+</p>
+<p>You can use an h1 inside a section and it will be treated as the heading of the section, and have lesser semantic impact than an h1 that is at a higher level.
+</p>
+<p> Forms</p>
+<p> HTML 5 adds several new form attributes that prove quite useful, even if some are as yet poorly supported.</p>
+<ul>
+<li>placeholder="value": prepopulates field with data</li>
+<li>autofocus="autofocus": sets the input to have cursor focus</li>
+<li>required="required": ensures field is filled in before submission</li>
+<li>There are also several new <input> type attribute variants:</li>
+<li>type="email": checkes for the pattern of emails</li>
+<li>type="url": web addesses</li>
+<li>type="date": calendar popup</li>
+<li>type="tel": telephone numbers</li>
+<li>type="search": formats text input as search input</li>
+<li>type="color": color picker popup</li>
+<li>type="range": sliding scales</li>
+<li>type="pattern": regular expression pattern matching</li>
+</ul>
+
+<h2>Scaleable Vector Graphics</h2>
+<p>
+Scaleable Vector Graphics (SVG) can be embedded into HTML5 documents. SVG are 100% scalable without the pixelated effect that scaled raster images can suffer from. SVG file data is stored as text, so they are much smaller in file size than a raster equivalent.
+You can use SVG graphics with the img tag, just as with raster graphics. You can also use .svg as a CSS background-image.
+</p>
+<!-- <img src="images/logo.svg" alt="COMP 1950 logo" /> -->
+<p>The png on the left is 26KB. The .svg on the right is only 4KB.</p>
+
+
+</body>
+</html>
