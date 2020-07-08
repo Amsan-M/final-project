@@ -1,0 +1,21 @@
+.home-wrapper{
+    position: relative;
+
+}
+ 
+body{
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-home{
+    display: flex;
+}
+   picture{
+img{
+    width:100%  !important;
+    height:auto;
+    }
+}

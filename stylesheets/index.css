@@ -1,5 +1,149 @@
+.lessons-wrapper {
+  width: 90%;
+  min-height: 500px;
+  padding: 5% 2%;
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: yellow;
+  justify-content: center;
+  grid-column-gap: 0.2em;
+  grid-row-gap: 0.2em;
+}
+.lessons-wrapper .day-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  align-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.schedule-wrapper {
+  width: 90%;
+  padding: 5% 2%;
+  display: grid;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: yellow;
+  justify-content: center;
+  grid-column-gap: 0.2em;
+  grid-row-gap: 0.2em;
+}
+.schedule-wrapper p {
+  margin: 0px;
+}
+
+.day-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  align-content: flex-start;
+}
+
+.day {
+  width: 100%;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.planning {
+  display: flex;
+  width: 100%;
+  margin-left: 5%;
+}
+.planning ul {
+  padding: 0px;
+  list-style: none;
+}
+
 body {
-  background-color: red;
+  background-color: teal;
+}
+
+.agenda {
+  background-color: blue;
+  margin: 5% 7% 5% 7%;
+  padding: 5%;
+  text-align: center;
+}
+.agenda ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.course {
+  background-color: lightgray;
+  margin: 5% 7% 5% 7%;
+  padding: 5%;
+}
+
+section {
+  margin: 5% 7% 5% 7%;
+  padding: 5%;
+  background-color: whitesmoke;
+}
+section .section-title {
+  background-color: green;
+}
+section .section-content {
+  background-color: yellow;
+  padding: 5%;
+}
+
+.about-content h2 {
+  text-align: center;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.description, .course-goals, .evaluation {
+  padding: 2%;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.course-goals ul {
+  list-style: square;
+  padding: 0px;
+}
+
+header h1 {
+  color: white;
+}
+
+.home-wrapper {
+  position: relative;
+}
+
+body {
+  background-color: teal;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-home {
+  display: flex;
+}
+
+picture img {
+  width: 100% !important;
+  height: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

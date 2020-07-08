@@ -1,0 +1,28 @@
+.about-content{
+    h2{
+        text-align:center;
+    }
+}
+
+
+.about-title{
+    text-align:center;
+}
+
+.description, .course-goals, .evaluation{
+    padding: 2%;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.course-goals{
+    ul{
+    list-style: square;
+    padding:0px;
+    }
+}
+
+header h1{
+    color:white;
+
+}

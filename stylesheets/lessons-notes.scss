@@ -1,0 +1,40 @@
+//stylesheets/lessons.scss
+body{
+    background-color: teal;
+    
+
+
+}
+.agenda{
+    background-color: blue; 
+    margin:5% 7% 5% 7%;
+    padding:5%;
+    text-align: center;
+    ul{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+    }
+}
+.course{ 
+    background-color: lightgray; 
+    margin:5% 7% 5% 7%;
+    padding:5%; 
+
+}
+
+section{
+    margin:5% 7% 5% 7%;
+    padding:5%;
+    background-color: whitesmoke;
+
+.section-title{
+    background-color: green;
+}
+.section-content{
+    background-color: yellow;
+    padding:5%;
+}
+   
+}
+   
