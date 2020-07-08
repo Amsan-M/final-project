@@ -4,10 +4,22 @@
 }
  
 body{
-    background-color: teal;
+    background-color:whitesmoke;
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    h1{
+        color:rgb(0, 60, 113);
+       // color:#fff400;
+    }
+    a{
+        color:rgb(0, 60, 113);  
+    }
+}
+
+.banner-wrapper{
+    min-height:450px;
 }
 
 .main-home{

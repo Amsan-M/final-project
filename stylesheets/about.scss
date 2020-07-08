@@ -7,12 +7,15 @@
 
 .about-title{
     text-align:center;
+    background-color:#ffff40;
+   color:rgb(0, 60, 113);
 }
 
 .description, .course-goals, .evaluation{
     padding: 2%;
     text-align: justify;
     line-height: 1.5;
+    color:rgb(0, 60, 113);
 }
 
 .course-goals{
@@ -20,6 +23,10 @@
     list-style: square;
     padding:0px;
     }
+}
+
+.evaluation{
+    text-align: center;
 }
 
 header h1{
