@@ -11,7 +11,7 @@
     <header>
         <nav>
             <ul>
-                <li> <a href ="about.html"> About</a></li>
+                <li><a href ="about.html"> About</a></li>
                 <li><a href="contact.html">Contact</a> </li>
                 <li><a href="home.html">Home</a> </li>
                 <li><a href="lessons.html">Lessons</a></li>
@@ -19,10 +19,11 @@
         </ul>
         </nav>
     </header>
+
     <main>
     <h1>Day 2</h1>
 
-    <div class = "courses nav">
+    <div class = "courses-nav">
         <ul>
             <li><a href="day1.html">Previous</a></li>
             <li><a href="day3.html">Next</a></li>
@@ -47,7 +48,7 @@
         <section>
 
         <div class="section-title">
-      <h1>Character Sets And Languages</h1>
+      <h2>Character Sets And Languages</h2>
         </div>
 
         <div class="section-content">
@@ -194,7 +195,7 @@
         <div class="section-content">
             <h3>HTML5: Enhanced Semantic Coding</h3>
 <p>It is crucial for all HTML content to be semantically marked up. This is how browsers, search engines, and screen readers make sense of online content.</p>
-<p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:</p?
+<p>HTML5 provides more than just adjustments to the markup, there are new, powerfully semantic elements:</p>
 <ul>
 	<li>&lt;section&gt; is a tag representing a document or application section. in general, if you are 
         planning to use a heading, start a new section. a section must contain a heading, and may contain 
@@ -271,98 +272,119 @@ In HTML5, each piece of sectioned content has its own self-contained outline. Th
             <li>type=&quot;pattern&quot;: regular expression pattern matching</li>
         </ul>
 
+        <h3> Scaleable Vector Graphics</h3>
+        <p>Scaleable Vector Graphics (SVG) can be embedded into HTML5 documents. SVG are 100% scalable without the pixelated effect that scaled raster images can suffer from. SVG file data is stored as text, so they are much smaller in file size than a raster equivalent.</p>
+<p>You can use SVG graphics with the img tag, just as with raster graphics. You can also use .svg as a CSS background-image.
+<p>&lt;img src=&quot;images/logo.svg&quot; alt=&quot;COMP 1950 logo&quot; /&gt;
+The png on the left is 26KB. The .svg on the right is only 4KB.</p>
+
+<p>Alternatively, you can use SVG code 'inline' with the svg tag. The advantage of doing this is it will result in one less request/response between the client and the server. The disadvantage to inline SVG is that it adds considerable clutter to your your .html code. Just copy the source code from your .svg file and paste it directly into your .html!</p>
+<p>
+&lt;svg viewBox=&quot;0 0 55 28&quot;&gt;
+	&lt;!-- svg code goes here... sometimes there is a LOT of code here! --&gt;
+&lt;/svg&gt;
+<p>
+
+<h3>SVG Tools</h3>
+<p>Use an SVG application to help you create and manipulate your SVG code.</p>
+<p>	Adobe Illustrator</p>
+<p>		Inkscape (Open source, Windows/Mac/Linux)<p>	
+
+
+    <h2>Multimedia</h2>
+<p>HTML5's more responsive multimedia features have made it easier to provide appropriately formatted video and audio to the client.</p>
+
+<h3>Audio</h3>
+<p>The audio element provides a way to offer many audio formats to the client, allowing the browser to choose the one most suitable.</p>
+<p>The most common audio formats for the web are: audio/mp3, audio/mpeg and audio/ogg.
+Each audio tag may contain:,</p>
+<ul>
+<li>	source tags as children of the audio tag, one for each audio format available. Each source must have a src (path to audio file) and type (audio file MIME type)</li>
+<li>	controls=&quot;controls&quot; give the user control over the audio *important for usability*</li>
+<li>	loop=&quot;loop&quot; loop audio playback</li>
+<li>	preload=&quot;none&quot; dont load the audio until the user clicks 'play', </preload=&quot;metadata&quot; preloads the clip duration statistic only, preload=&quot;auto&quot; loads the audio clip to the client before they click 'play' </li>
+<li>	autoplay=&quot;autoplay&quot; begin playing audio as soon as page is loaded *NOT very user friendly*</li>
+<li>	you may also wish to include a direct link for your users to download the file</li>
+</ul>
+<p>
+&lt;audio controls=&quot;controls&quot;&gt;
+	&lt;source src=&quot;media/house-a-square.mpg&quot; type=&quot;audio/mpeg&quot; /&gt;
+	&lt;source src=&quot;media/house-a-square.mp3&quot; type=&quot;audio/mp3&quot; /&gt;
+	&lt;source src=&quot;media/house-a-square.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
+&lt;/audio&gt;
+</p>
+
+Download the audio
+
+<h3>Video</h3>
+
+<p>The video element provides a way to offer many video formats to the client, allowing the browser to choose the one most suitable.</p>
+<p>The most common video formats for the web are: video/mp4, video/ogg and video/webm.
+Each video tag may contain:</p>
+<li>	source tags as children of the video tag, one for each video format available. Each source must have a src (path to video file) and type (video file MIME type)</li>
+<li>	controls=&quot;controls&quot; give the user control over the video playback *important for usability*</li>
+<li>	width=&quot;250&quot; height=&quot;100&quot; set the size of the video (use CSS instead. absolute values only, no percentages)</li>
+<li>	poster=&quot;image.jpg&quot; display a static image when the video is not playing</li>
+<li>loop=&quot;loop&quot; loop playback</li>
+<li>	muted=&quot;muted&quot; begin with audio silenced</li>
+<li>	preload=&quot;none&quot; dont load the video until the user clicks 'play', preload=&quot;metadata&quot; preloads the clip duration statistic only, preload=&quot;auto&quot; loads the clip to the client before they click 'play'</li>
+<li>	autoplay=&quot;autoplay&quot; begin playing video as soon as page is loaded *NOT very user friendly*</li>
+<li> you may also wish to include a direct link for your users to download the file</li>
+</ul>
+<p> &lt;video 	preload=&quot;none&quot; 
+	controls=&quot;controls&quot; 
+	poster=&quot;media/poster-bear-in-water.jpg&quot;&gt;
+	
+	&lt;source src=&quot;media/bear-in-water.webm&quot; type=&quot;video/webm&quot; /&gt; 
+	&lt;source src=&quot;media/bear-in-water.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+	&lt;source src=&quot;media/bear-in-water.ogg&quot; type=&quot;video/ogg&quot; /&gt;
+&lt;/video&gt;	
+
+</p>
+Download the video
+HTML5 Today
+User agent browsers will have varying support for the HTML5 specification.</li>
+<li>	caniuse.com is an excellent source for compatibility testing</li>
+<li>	Try the HTML5Test to test a specific browser.</li>
+<li>	To ensure early versions of Internet Explorer will render HTML5 tags correctly, you can add the HTML5 shiv:</li>
+<li>&lt;script&gt;document.createElement(&quot;article&quot;);&lt;/script&gt;</li>
+<li>This creates an element called &lt;article&gt; which the browser (IE, in this case) can understand and style appropriately</li>
+<li>Creating an entry for every element can get a bit heavy, so you can use the HTML5shiv script written by Remy Sharp. Insert a coded-comment that will apply the shiv ONLY with IE browsers earlier than version 9:</li>
+<li>&lt;!--[if lt IE 9]&gt;</li>
+<li>	&lt;script src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</li>
+<li> Since HTML5 understands both HTML4 and XHTML tags, converting an older HTML file into HTML5 is simply a matter of updating the DOCTYPE and meta tag for charset.
+To Do</li>
+<li>	Download, review, and complete the homework assignment from D2L</li>
+<li>	Review the HTML5 semantic tags, know how and when to use them to maxmize the semantic strucure of your HTML </li>
+
+
+
+
+
+
+
+
 
 
           </div>
         </section>
-        
-        <section>
-        <div class="section-title">
 
-        </div>
-        <div class="section-content">
-        
-        </div>
-        </section>
-        
-        <section>
-        <div class="section-title">
-        
-       
-        </div>
-        <div class="section-content">
-        
-        
-    </div>
-        
-        
-        </section>
-        
-        <section>
-        <div class="section-title">
-        
-       
-        </div>
-        <div class="section-content">
-       
-        
-     
-        
-        
-       </div>
-       </section>
-        <section>
-        <div class="section-title">
-   
-        </div>
-    
-        <div class=section-content>
-
-
-        </div>
-        
-        </section>
-        
-        <section>
-        <div class="section-title">
-     
-        </div>
-        <div class="section-content">
-       
-        </div>
-        </section>
-        
-        <section>
-        <div class="section-title">
- 
-        </div>
-        <div class="section-content">
-        
-        </div>
-        </section>
-        
-        <section>
-        <div class="section-title">
-       
-        </div>
-        <div class="section-content">
-        
-        </section>
-        
-        </div>
-   
-    </div>
     <div class=to-do>
-     
+        <ul>
+        <li> Download, review, and complete the homework assignment from D2L</li>	
+       <li>Review the HTML5 semantic tags, know how and when to use them to maxmize the semantic strucure of your HTML</li>
+    </ul>
+    </p>
      
     </div>
 </main>
-    <footer>
-        <div class="student-info">
-        <p>Final Project </p>
-        <p>Nasma M - A01171322</p>
-    </div>
-    </footer>
+<footer>
+    <div class="student-info">
+    <p>Final Project </p>
+    <p>Student ID: A01171322</p>
+</div>
+</footer>
         
         
 </body>

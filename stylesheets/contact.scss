@@ -1,0 +1,32 @@
+.form-wrapper{
+    
+    margin: 2%;
+    padding: 2%;
+    width: 90%;
+}
+
+form{
+display: flex;
+    flex-direction: column;
+ 
+
+    fieldset{
+width:66%;
+    }
+}
+
+.message-input-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.name-input-wrapper{
+    display: flex;
+    flex-direction: column;
+    input{
+        width:70%;
+    }
+}
+.button-wrapper{
+    margin: 2%;
+    padding: 2%;
+}

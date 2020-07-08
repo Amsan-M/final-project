@@ -8,10 +8,11 @@
     align-items: stretch;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    background-color: yellow;
+    background-color: #ffff40;
     justify-content: center;
     grid-column-gap: 0.2em;
     grid-row-gap: 0.2em;
+    margin-bottom: 2em;
 
     .day-wrapper{
         width: 100%;

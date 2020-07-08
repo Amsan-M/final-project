@@ -6,10 +6,11 @@
   align-items: stretch;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  background-color: yellow;
+  background-color: #ffff40;
   justify-content: center;
   grid-column-gap: 0.2em;
   grid-row-gap: 0.2em;
+  margin-bottom: 2em;
 }
 .lessons-wrapper .day-wrapper {
   width: 100%;
@@ -38,6 +39,7 @@ main {
   justify-content: center;
   grid-column-gap: 0.2em;
   grid-row-gap: 0.2em;
+  margin-bottom: 2em;
 }
 .schedule-wrapper p {
   margin: 0px;
@@ -69,49 +71,65 @@ main {
 }
 
 body {
-  background-color: teal;
+  background-color: #003c71;
 }
 
 .agenda {
-  background-color: blue;
+  background-color: #003c71;
   margin: 5% 7% 5% 7%;
   padding: 5%;
   text-align: center;
+}
+.agenda h1 {
+  color: #ffff40;
 }
 .agenda ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  color: whitesmoke;
 }
 
 .course {
   background-color: lightgray;
-  margin: 5% 7% 5% 7%;
-  padding: 5%;
 }
 
 section {
   margin: 5% 7% 5% 7%;
   padding: 5%;
-  background-color: yellow;
+  background-color: #003c71;
 }
 section .section-title {
   color: #003c71;
   text-transform: capitalize;
 }
+section .section-title h2 {
+  color: #ffff40;
+}
 section .section-content {
+  display: flex;
+  flex-direction: column;
   background-color: whitesmoke;
   padding: 5%;
 }
 
+.about-content {
+  padding: 3%;
+  margin: 2%;
+}
 .about-content h2 {
   text-align: center;
+}
+
+.about-wrapper {
+  background-color: whitesmoke;
 }
 
 .about-title {
   text-align: center;
   background-color: #ffff40;
   color: #003c71;
+  padding: 1%;
 }
 
 .description, .course-goals, .evaluation {
@@ -135,11 +153,13 @@ header h1 {
 }
 
 .home-wrapper {
-  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -152,14 +172,31 @@ body a {
 }
 
 .banner-wrapper {
-  min-height: 450px;
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.banner-wrapper h1 {
+  margin: 0px;
+  color: whitesmoke;
 }
 
 .main-home {
   display: flex;
 }
+.main-home .course-goals {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  margin: auto;
+}
 
-picture img {
+img {
   width: 100% !important;
   height: auto;
 }
@@ -189,6 +226,17 @@ nav ul li a :hover {
   color: white;
 }
 
+.courses-nav {
+  width: 80%;
+}
+.courses-nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  padding: 0px;
+  justify-content: space-between;
+}
+
 footer {
   background-color: #dbd7d7;
   width: 100%;
@@ -200,6 +248,38 @@ footer .student-info {
   flex-direction: column;
   align-items: center;
   align-content: center;
+}
+
+.form-wrapper {
+  margin: 2%;
+  padding: 2%;
+  width: 90%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form fieldset {
+  width: 66%;
+}
+
+.message-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.name-input-wrapper input {
+  width: 70%;
+}
+
+.button-wrapper {
+  margin: 2%;
+  padding: 2%;
 }
 
 /*# sourceMappingURL=index.css.map */

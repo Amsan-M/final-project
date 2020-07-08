@@ -1,39 +1,49 @@
 //stylesheets/lessons.scss
 body{
-    background-color: teal;
+    background-color:rgb(0, 60, 113);
     
 
 
 }
 .agenda{
-    background-color: blue; 
+    background-color: rgb(0, 60, 113); 
     margin:5% 7% 5% 7%;
     padding:5%;
     text-align: center;
+
+    h1{
+        color:#ffff40;
+    }
     ul{
         list-style:none;
         margin: 0;
         padding: 0;
+        color:whitesmoke;
     }
 }
 .course{ 
     background-color: lightgray; 
-    margin:5% 7% 5% 7%;
-    padding:5%; 
+    // margin:5% 7% 5% 7%;
+    // padding:5%; 
 
 }
 
 section{
     margin:5% 7% 5% 7%;
     padding:5%;
-    background-color: yellow;
+    background-color: rgb(0, 60, 113);
 
 .section-title{
   color: rgb(0, 60, 113);
   text-transform:capitalize;
+
+  h2{
+      color:#ffff40;
+  }
 }
 .section-content{
-   
+    display: flex;
+    flex-direction: column;
     background-color: whitesmoke;
     padding:5%;
 }
