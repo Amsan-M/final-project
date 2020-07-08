@@ -185,7 +185,7 @@ body a {
 }
 
 .banner-wrapper {
-  background-image: url("/images/background.jpg");
+  background-image: url("images/background.jpg");
   background-size: cover;
   min-height: 400px;
   display: flex;
