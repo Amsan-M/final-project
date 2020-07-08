@@ -114,12 +114,16 @@ section .section-content {
 }
 section .section-content .images {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .video-container {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.video-container video {
+  width: 100%;
 }
 
 .about-content {
@@ -181,7 +185,7 @@ body a {
 }
 
 .banner-wrapper {
-  background-image: url(/images/background.jpg);
+  background-image: url("/images/background.jpg");
   background-size: cover;
   min-height: 400px;
   display: flex;

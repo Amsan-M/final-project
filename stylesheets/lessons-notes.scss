@@ -49,6 +49,7 @@ section{
 
     .images{
         display: flex;
+        flex-wrap: wrap;
     }
 }
    
@@ -58,4 +59,7 @@ section{
     display:flex;
     width:100%;
     justify-content:center;
+    video{
+        width:100%;
+    }
 }
