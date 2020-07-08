@@ -112,6 +112,15 @@ section .section-content {
   background-color: whitesmoke;
   padding: 5%;
 }
+section .section-content .images {
+  display: flex;
+}
+
+.video-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 .about-content {
   padding: 3%;

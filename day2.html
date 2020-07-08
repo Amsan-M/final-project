@@ -278,6 +278,11 @@ In HTML5, each piece of sectioned content has its own self-contained outline. Th
 <p>&lt;img src=&quot;images/logo.svg&quot; alt=&quot;COMP 1950 logo&quot; /&gt;
 The png on the left is 26KB. The .svg on the right is only 4KB.</p>
 
+<div class="images">
+    <img src="/images/comp1950_logo.png" alt="Computer" style="width:auto;">
+    <img src="/images/comp1950_logo.svg" alt="Computer" style="width:auto;">
+</div>
+
 <p>Alternatively, you can use SVG code 'inline' with the svg tag. The advantage of doing this is it will result in one less request/response between the client and the server. The disadvantage to inline SVG is that it adds considerable clutter to your your .html code. Just copy the source code from your .svg file and paste it directly into your .html!</p>
 <p>
 &lt;svg viewBox=&quot;0 0 55 28&quot;&gt;
@@ -313,6 +318,12 @@ Each audio tag may contain:,</p>
 	&lt;source src=&quot;media/house-a-square.ogg&quot; type=&quot;audio/ogg&quot; /&gt;
 &lt;/audio&gt;
 </p>
+<audio controls="controls">
+	<source src="media/house-a-square.mpg" type="audio/mpeg" />
+	<source src="media/house-a-square.mp3" type="audio/mp3" />
+	<source src="media/house-a-square.ogg" type="audio/ogg" />
+</audio>
+
 
 Download the audio
 
@@ -339,7 +350,13 @@ Each video tag may contain:</p>
 	&lt;source src=&quot;media/bear-in-water.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 	&lt;source src=&quot;media/bear-in-water.ogg&quot; type=&quot;video/ogg&quot; /&gt;
 &lt;/video&gt;	
-
+<div class="video-container">
+<video preload="none" controls="controls" poster="media/poster-bear-in-water.jpg">
+     <source src="media/bear-in-water.webm" type="video/webm" /> 
+     <source src="media/bear-in-water.mp4" type="video/mp4" /> 
+     <source src="media/bear-in-water.ogg" type="video/ogg" /> 
+</video>
+</div>
 </p>
 Download the video
 HTML5 Today

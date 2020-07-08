@@ -46,7 +46,16 @@ section{
     flex-direction: column;
     background-color: whitesmoke;
     padding:5%;
+
+    .images{
+        display: flex;
+    }
 }
    
 }
    
+.video-container{
+    display:flex;
+    width:100%;
+    justify-content:center;
+}
